@@ -1,0 +1,61 @@
+export type Lang = "en" | "ar";
+const en = {
+  soon: "Coming Soon", label: "THE GAME IS COMING SOON",
+  h1: "Get Ready for the Ultimate Anime Showdown.",
+  desc: "Challenge your friends, test your knowledge, and discover who's the ultimate anime expert. Be among the first to experience the game.",
+  placeholder: "you@example.com", emailLabel: "Email address",
+  join: "JOIN THE EARLY ACCESS", joining: "JOINING…", joined: "YOU'RE IN",
+  reassure: "Be among the first to play. No spam, just launch updates.",
+  download: "DOWNLOAD — COMING SOON", downloadTip: "Downloads aren't available yet",
+  invalid: "Enter a valid email address, like name@example.com.",
+  notConfigured: "Signup isn't connected yet. Set VITE_SIGNUP_ENDPOINT to start collecting emails.",
+  failed: "We couldn't save your email. Check your connection and try again.",
+  success: "You're on the list. We'll email you when early access opens.",
+  duplicate: "This email is already on the list.",
+  features: [
+    ["PLAY WITH FRIENDS", "Challenge your friends in exciting guessing battles."],
+    ["TEST YOUR KNOWLEDGE", "Use clever questions and discover your opponent's character."],
+    ["MORE ANIME WORLDS", "More characters and anime universes are coming."],
+  ] as [string, string][],
+  loveTitle: "Let's build this game together.", loveText: "Every coffee helps us add new characters, anime worlds, and features. Support the project and help bring it to life sooner.",
+  support: "BUY US A COFFEE", supportTip: "Set KOFI_URL in src/config.ts", supportNote: "Every contribution goes straight into development.",
+    howTitle: "HOW TO PLAY", howPill: "Works without internet",
+  steps: [
+    ["Connect", "Join the same Wi-Fi, or open a hotspot on one phone and let your friend connect to it."],
+    ["Create and join", "The host taps Create Room and shares the code shown at the top. Your friend taps Join Room and enters it."],
+    ["Get ready", "Both tap I'm Ready, then pick a secret character. The host taps Start."],
+    ["Guess and win", "Know your friend's character? Tap Guess, pick it, and confirm."],
+  ] as [string, string][],
+  rights: "All rights reserved.", hint: "Is your character a hero?", toggle: "العربية", toggleLabel: "التبديل إلى العربية",
+};
+const ar: typeof en = {
+  soon: "قريباً", label: "اللعبة قادمة قريباً",
+  h1: "استعدّ لأعظم مواجهة في عالم الأنمي.",
+  desc: "تحدَّ أصدقاءك، واختبر معرفتك، واكتشف من هو الخبير الأول في الأنمي. كن من أوائل من يجرّبون اللعبة.",
+  placeholder: "you@example.com", emailLabel: "البريد الإلكتروني",
+  join: "انضم إلى الوصول المبكر", joining: "جارٍ الانضمام…", joined: "تم تسجيلك",
+  reassure: "كن من أوائل اللاعبين. بلا إزعاج، فقط أخبار الإطلاق.",
+  download: "التحميل — قريباً", downloadTip: "التحميل غير متاح بعد",
+  invalid: "أدخل بريداً إلكترونياً صحيحاً، مثل name@example.com.",
+  notConfigured: "التسجيل غير مربوط بعد. اضبط VITE_SIGNUP_ENDPOINT لبدء جمع البريد.",
+  failed: "تعذّر حفظ بريدك. تحقق من اتصالك وحاول مرة أخرى.",
+  success: "تم تسجيلك في القائمة. سنراسلك عند فتح الوصول المبكر.",
+  duplicate: "هذا البريد مسجَّل لدينا بالفعل.",
+  features: [
+    ["العب مع أصدقائك", "تحدَّ أصدقاءك في معارك تخمين مثيرة."],
+    ["اختبر معلوماتك", "اطرح أسئلة ذكية واكتشف شخصية خصمك."],
+    ["عوالم أنمي أكثر", "المزيد من الشخصيات وعوالم الأنمي في الطريق."],
+  ],
+  loveTitle: "لنبنِ هذه اللعبة معاً", loveText: "كل فنجان قهوة يساعدنا على إضافة شخصيات وعوالم أنمي ومزايا جديدة. ادعم المشروع وساعدنا على إطلاقه أسرع.",
+  support: "اشترِ لنا قهوة", supportTip: "اضبط KOFI_URL في src/config.ts", supportNote: "كل مساهمة تذهب مباشرة إلى تطوير اللعبة.",
+  howTitle: "كيفية اللعب", howPill: "يعمل بدون إنترنت",
+  steps: [
+    ["الاتصال", "انضم إلى نفس شبكة Wi-Fi، أو افتح نقطة اتصال على هاتف واحد ودع صديقك ينضم إليها."],
+    ["إنشاء وانضمام", "يضغط المضيف على إنشاء غرفة ويشترك في الرمز المعروض في الأعلى. يضغط صديقه على انضمام إلى الغرفة ويُدخل الرمز."],
+    ["التحضير", "يضغط كلا الطرفين على أنا مستعد، ثم يختار شخصية سرية. يضغط المضيف على البدء."],
+    ["التخمين والفوز", "هل تعرف شخصية صديقك؟ اضغط على التخمين، اخترها، وتأكيد."],
+  ] as [string, string][],
+  rights: "جميع الحقوق محفوظة.", hint: "هل شخصيتك بطل؟", toggle: "English", toggleLabel: "Switch to English",
+};
+export const dict = { en, ar };
+export type Dict = typeof en;
