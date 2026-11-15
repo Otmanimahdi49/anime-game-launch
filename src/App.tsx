@@ -2,7 +2,7 @@ import SignupForm from "./components/SignupForm";
 import HeroVisual from "./components/HeroVisual";
 import { useEffect, useState } from "react";
 import { dict, type Lang } from "./i18n";
-import { GAME_NAME, KOFI_URL, SOCIALS, isHttpUrl, DEVELOPER_NAME, DEVELOPER_LOGO, DEVELOPER_URL } from "./config";
+import { GAME_NAME, KOFI_URL, SOCIALS, isHttpUrl, DEVELOPER_NAME, DEVELOPER_LOGO, DEVELOPER_URL, DOWNLOAD_URL, } from "./config";
 
 const Logo = () => (
   <span className="flex items-center gap-2.5 font-display text-lg font-extrabold">
@@ -44,6 +44,7 @@ export default function App() {
     try { localStorage.setItem("lang", lang); } catch { /* ignore */ }
   }, [lang]);
   const kofiReady = isHttpUrl(KOFI_URL);
+  const downloadReady = isHttpUrl(DOWNLOAD_URL);
   const socials = SOCIALS.filter((s) => isHttpUrl(s.url));
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,#101625_0%,#080B14_60%)]">
@@ -64,10 +65,18 @@ export default function App() {
             <h1 className="font-display text-4xl font-extrabold leading-[1.05] sm:text-6xl">{t.h1}</h1>
             <p className="max-w-lg text-lg leading-relaxed text-muted">{t.desc}</p>
             <SignupForm t={t} lang={lang} />
-            <button type="button" disabled aria-disabled="true" title={t.downloadTip}
-              className="cursor-not-allowed rounded-xl border border-white/15 px-6 py-3 text-sm font-bold tracking-wide text-muted">
-              {t.download}
-            </button>
+            {downloadReady ? (
+              <a href={DOWNLOAD_URL} rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-accent px-6 py-3 text-sm font-bold tracking-wide text-accent transition hover:bg-accent hover:text-bg">
+                <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+                {t.downloadAndroid}
+              </a>
+            ) : (
+              <button type="button" disabled aria-disabled="true" title={t.downloadTip}
+                className="cursor-not-allowed rounded-xl border border-white/15 px-6 py-3 text-sm font-bold tracking-wide text-muted">
+                {t.download}
+              </button>
+            )}
           </div>
           <HeroVisual hint={t.hint} />
         </section>

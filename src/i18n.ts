@@ -26,6 +26,7 @@ const en = {
     ["Get ready", "Both tap I'm Ready, then pick a secret character. The host taps Start."],
     ["Guess and win", "Know your friend's character? Tap Guess, pick it, and confirm."],
   ] as [string, string][],
+  downloadAndroid: "DOWNLOAD FOR ANDROID",
   rights: "All rights reserved.", hint: "Is your character a hero?", toggle: "العربية", toggleLabel: "التبديل إلى العربية",
 };
 const ar: typeof en = {
@@ -55,6 +56,7 @@ const ar: typeof en = {
     ["التحضير", "يضغط كلا الطرفين على أنا مستعد، ثم يختار شخصية سرية. يضغط المضيف على البدء."],
     ["التخمين والفوز", "هل تعرف شخصية صديقك؟ اضغط على التخمين، اخترها، وتأكيد."],
   ] as [string, string][],
+  downloadAndroid: "تحميل للأندرويد",
   rights: "جميع الحقوق محفوظة.", hint: "هل شخصيتك بطل؟", toggle: "English", toggleLabel: "Switch to English",
 };
 export const dict = { en, ar };

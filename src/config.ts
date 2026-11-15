@@ -15,3 +15,5 @@ export const SOCIALS: { label: string; url: string }[] = [
 /** Set via .env (VITE_SIGNUP_ENDPOINT). Empty = signup is not connected. */
 export const SIGNUP_ENDPOINT: string = import.meta.env.VITE_SIGNUP_ENDPOINT ?? "";
 export const isHttpUrl = (v: string) => /^https?:\/\//i.test(v);
+/** Direct link to the APK. Leave empty to keep the download button disabled. */
+export const DOWNLOAD_URL = "https://github.com/Otmanimahdi49/anime-game-launch/releases/latest/download/shinra.apk";
