@@ -17,8 +17,8 @@ const en = {
     ["TEST YOUR KNOWLEDGE", "Use clever questions and discover your opponent's character."],
     ["MORE ANIME WORLDS", "More characters and anime universes are coming."],
   ] as [string, string][],
-  loveTitle: "Let's build this game together.", loveText: "Every coffee helps us add new characters, anime worlds, and features. Support the project and help bring it to life sooner.",
-  support: "BUY US A COFFEE", supportTip: "Set KOFI_URL in src/config.ts", supportNote: "Every contribution goes straight into development.",
+  loveTitle: "Support the developer.", loveText: "Enjoying what I build? A coffee is a personal thank-you to the developer and helps me keep learning and building.",
+  support: "BUY ME A COFFEE", supportTip: "Set KOFI_URL in src/config.ts", supportNote: "A voluntary tip for the developer. Not a payment for the game.",
     howTitle: "HOW TO PLAY", howPill: "Works without internet",
   steps: [
     ["Connect", "Join the same Wi-Fi, or open a hotspot on one phone and let your friend connect to it."],
@@ -47,8 +47,8 @@ const ar: typeof en = {
     ["اختبر معلوماتك", "اطرح أسئلة ذكية واكتشف شخصية خصمك."],
     ["عوالم أنمي أكثر", "المزيد من الشخصيات وعوالم الأنمي في الطريق."],
   ],
-  loveTitle: "لنبنِ هذه اللعبة معاً", loveText: "كل فنجان قهوة يساعدنا على إضافة شخصيات وعوالم أنمي ومزايا جديدة. ادعم المشروع وساعدنا على إطلاقه أسرع.",
-  support: "اشترِ لنا قهوة", supportTip: "اضبط KOFI_URL في src/config.ts", supportNote: "كل مساهمة تذهب مباشرة إلى تطوير اللعبة.",
+  loveTitle: "ادعم المطوّر", loveText: "إن أعجبك ما أبنيه، فقهوة واحدة شكر شخصي للمطوّر وتساعده على مواصلة التعلّم والعمل.",
+  support: "اشترِ لي قهوة", supportTip: "اضبط KOFI_URL في src/config.ts", supportNote: "دعم شخصي اختياري للمطوّر، وليس مقابلاً للعبة.",
   howTitle: "كيفية اللعب", howPill: "يعمل بدون إنترنت",
   steps: [
     ["الاتصال", "انضم إلى نفس شبكة Wi-Fi، أو افتح نقطة اتصال على هاتف واحد ودع صديقك ينضم إليها."],
